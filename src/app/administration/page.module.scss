@@ -1,0 +1,61 @@
+@import '../../variables.scss';
+.mainAdm {
+    display: flex;
+    justify-content: center;
+    background-color: $white-background;  
+    
+    .sectionAdm {
+        width: 40rem;
+        min-height: 96vh;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        background-color: white;    
+        margin-top: 4vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .divTitle {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            h1 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-top: 2rem;
+                text-align: center;
+            }
+        }
+
+        .line {
+            width: 80%;
+            height: 2px;
+            background-color: $background-color;
+            margin-bottom: 1rem;
+        }
+
+        .msgError {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background-color: #F0134D;
+            color: white;
+            font-size: 1.3rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .submitButton {
+            width: 15rem;
+            border: none;
+            font-size: 1.4rem;
+            padding: 0.5rem;
+            border-radius: 20px;
+            background-color: $main-orange;
+            color: white;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+        }
+    }
+}

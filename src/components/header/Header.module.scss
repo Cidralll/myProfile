@@ -1,0 +1,91 @@
+@import '../../variables.scss';
+.header {
+    width: 100vw;
+    height: 23rem;
+    background-color: $main-orange;
+    background-image: url('./wallpaper.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom-left-radius:  30px;
+    border-bottom-right-radius: 30px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .LC {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $main-orange;
+        margin-top: 0.6rem;
+        margin-left: 0.6rem;
+        border-radius: 100px;
+        color: $white-background;
+        font-size: 1.1rem;
+    }
+
+    .sectionProfile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .profile {
+            width: 50rem;
+            min-height: 12rem;
+            background-color: white;
+            border-top-right-radius: 30px ;
+            border-top-left-radius:  30px;
+            display: flex;
+
+            .divLeft {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .profilePicture {
+                    width: 9.2rem;
+                    height: 9.2rem;
+                    background-color: $main-orange;
+                    border-radius: 100px;
+                    position: relative;
+                }
+                p {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+
+            .divRight {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                p {
+                    font-size: 1.2rem;
+                    margin-top: 0.2rem;
+                }
+                .icons {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 391px) {
+    .profile {
+        flex-direction: column;
+
+        .divLeft {
+            min-width: 100%;
+        }
+        .divRight {
+            margin-left: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.redirectPost {
+    width: 100%;
+    padding-left: 1rem;
+    display: flex;
+    a{
+        font-size: 1.3rem;
+        cursor: pointer;
+        margin-top: 0.5rem;
+    }
+    a:hover {
+        text-decoration: underline;
+      }
+}
