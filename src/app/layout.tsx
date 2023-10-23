@@ -1,4 +1,4 @@
-import Analytics from '@/components/analytics/analytics'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -18,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        <Analytics />
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+            <GoogleAnalytics ga_id= 
+            {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          ) : null}
         {children}
       </body>
     </html>
