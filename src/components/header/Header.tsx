@@ -39,7 +39,7 @@ export default function Header() {
                         ))}
                         <div className={styles.icons}>
                             <Link href="https://github.com/cidralll" target="_blank"><IconGithub /></Link>
-                            <Link href="www.linkedin.com/in/lucas-cidral-b01686241" target="_blank"><IconLinkedin /></Link>
+                            <Link href="https://linkedin.com/in/lucas-cidral-b01686241" target="_blank"><IconLinkedin /></Link>
                         </div>
                     </div>
                 </div>
