@@ -8,7 +8,7 @@ import Footer from '@/components/footer/Footer';
 // Busca os dados no banco de dados
 const getPosts = async () => {
   const posts = await prisma.profile.findMany({});
-  return posts
+  return posts.sort((a, b) => Number(b.id) - Number(a.id));
 }
 
 export default async function Home() {
