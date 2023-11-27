@@ -1,9 +1,9 @@
 import styles from './page.module.scss';
 import Header from '@/components/header/Header';
-import getCurrentDate from '@/services/getCurrentDate';
 import Post from '@/components/post/Post';
 import { prisma } from '@/lib/prisma';
 import Footer from '@/components/footer/Footer';
+import Date from '@/components/date/Date';
 
 // Busca os dados no banco de dados
 const getPosts = async () => {
@@ -12,7 +12,7 @@ const getPosts = async () => {
 }
 
 export default async function Home() {
-  const date = getCurrentDate();
+  
   const posts = await getPosts()
 
   return (
@@ -21,7 +21,7 @@ export default async function Home() {
       <section className={styles.publications}>
         <div className={styles.line} />
         <h1 className={styles.title}>Publicações</h1>
-        <div className={styles.date}>{ date }</div>
+        <Date />
         {posts.map((post) => (
           <Post 
               titlePost={post.title}
